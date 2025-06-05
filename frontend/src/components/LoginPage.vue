@@ -20,7 +20,7 @@
             type="text"
             id="userId"
             placeholder="Admin ID"
-            v-model="adminId"
+            v-model="email"
             required
           />
         </div>
@@ -74,7 +74,7 @@ export default {
   data() {
     return {
       // Form data
-      adminId: "",
+      email: "",
       password: "",
       rememberMe: false,
 
@@ -92,8 +92,8 @@ export default {
 
       try {
         // Send login credentials to backend
-        const response = await axios.post("http://localhost:3000/staff", {
-          adminId: this.adminId,
+        const response = await axios.post("http://localhost:3000/login", {
+          email: this.email,
           password: this.password,
         });
 
