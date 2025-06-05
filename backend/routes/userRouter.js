@@ -11,6 +11,14 @@ const router = express.Router();
 //First, we check the main admin password and email (adminSignUpAuth)
 //Then we call the function to sign up the new admin
 router.post('/', adminSignUpAuth, signUpAdmin);
+// Get all administrators signed up
+router.get('/admins', getAllAdmins);
+// Get a single admin's information
+router.get('/admins/username/:username', getAdminByUsername);
+// Update admin by username
+router.patch('/admins/username/:username', updateAdminByUsername);
+// Delete admin by username
+router.delete('/admins/username/:username', deleteAdminByUsername);
 
 //When an admin wants to log in
 router.post('/login', loginAdmin);
