@@ -105,7 +105,7 @@ export default createStore({
     },
     async addStaff({ dispatch }, payload) {
       try {
-        await fetch("http://localhost:3000/staff/", {
+        await fetch("http://localhost:3000/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
