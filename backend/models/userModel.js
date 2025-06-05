@@ -1,4 +1,4 @@
-import { pool } from "../config/config.js"; // Get database connection info
+import { pool } from "../config/db.js"; // Get database connection info
 import bcrypt from "bcrypt"; // Library to make passwords safe (hashing)
 
 // Sign up a new admin user

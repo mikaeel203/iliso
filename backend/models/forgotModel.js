@@ -1,5 +1,5 @@
 // Get the database connection from config file
-import { pool } from "../config/config.js"; 
+import { pool } from "../config/db.js"; 
 
 // Get all users from "users_cred" table
 // Ask the database for all users

@@ -3,7 +3,7 @@ import express from 'express';
 // Get the functions to sign up, log in, and log out admins
 import { signUpAdmin, loginAdmin, logoutAdmin } from '../controller/userController.js'; 
 // Get the checks (middleware) to protect routes
-import { authenticateToken, adminSignUpAuth } from '../middleware/authMiddleware.js'; 
+import { authenticateToken, adminSignUpAuth } from '../middlewares/authMiddleware.js'; 
 // Make a router to handle admin routes
 const router = express.Router(); 
 

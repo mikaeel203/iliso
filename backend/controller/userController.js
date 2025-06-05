@@ -1,9 +1,9 @@
 // Import necessary modules
 import jwt from "jsonwebtoken";        // Used for creating and verifying JWT tokens
 import bcrypt from "bcrypt";           // Used for hashing and comparing passwords securely
-import { pool } from "../config/config.js";  // Database connection pool
+import { pool } from "../config/db.js";  // Database connection pool
 import { config } from "dotenv";       // To load environment variables from .env
-import { getAdminByEmail } from "../model/userModel.js"; // Function to retrieve admin data by email
+import { getAdminByEmail } from "../models/userModel.js"; // Function to retrieve admin data by email
 
 config(); // Load environment variables
 

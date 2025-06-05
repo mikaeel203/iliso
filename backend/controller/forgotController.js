@@ -11,9 +11,9 @@ import {
   findUserByToken,    // Find user by reset token
   updatePassword,     // Update user's password
   getusers_db,        // Get list of users
-} from "../model/forgotModel.js";
+} from "../models/forgotModel.js";
 
-import { API_URL } from "../config/config.js"; // Base URL for reset link
+import { API_URL } from "../config/db.js"; // Base URL for reset link
 
 dotenv.config(); // Load env variables
 
