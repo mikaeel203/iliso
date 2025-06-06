@@ -14,7 +14,7 @@ const pool = mysql2.createPool({
 });
 
 // Base API URL used in links (e.g., for password reset links)
-export const API_URL = "http://localhost:3000"; // Update this in production to your deployed backend URL
+export const API_URL = "http://localhost:8080"; // Update this in production to your deployed backend URL
 
 // Export the pool for use in DB queries across the project
 export { pool };

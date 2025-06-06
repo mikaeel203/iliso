@@ -9,7 +9,5 @@ router.post("/forgot-password", forgotPassword);
 // When someone wants to set a new password, this route helps do that
 router.post("/reset-password", resetPassword);
 
-// This route gives back all users (for checking/testing maybe)
-router.get("/get-users", getusers);
 
 export default router; // Let other files use this router

@@ -1,21 +1,21 @@
 // Get the database connection from config file
 import { pool } from "../config/db.js"; 
 
-// Get all users from "users_cred" table
-// Ask the database for all users
-// Give back the users
-export const getusers_db = async () => {
-  const [users] = await pool.query("SELECT * FROM users_cred"); 
-  return users; 
-};
+// // Get all users from "users_cred" table
+// // Ask the database for all users
+// // Give back the users
+// export const getusers_db = async () => {
+//   const [users] = await pool.query("SELECT * FROM users_cred"); 
+//   return users; 
+// };
 
 // Find one admin by their email
 // Look for admin with the same email
 // If we find one, give them back. If not, give back null
-export const findUserByEmail = async (email) => {
-  const [user] = await pool.query("SELECT * FROM admin WHERE email = ?", [email]); 
-  return user.length ? user[0] : null; 
-};
+// export const findUserByEmail = async (email) => {
+//   const [user] = await pool.query("SELECT * FROM admin WHERE email = ?", [email]); 
+//   return user.length ? user[0] : null; 
+// };
 
 // Save the reset token and when it will stop working
 // Put the token and expiry time for that email
@@ -42,7 +42,7 @@ export const findUserByToken = async (token) => {
 // Change the password for the user and remove the reset token
 export const updatePassword = async (email, hashedPassword) => {
   await pool.query(
-    "UPDATE admin SET password = ?, reset_token = NULL, reset_token_expiry = NULL WHERE email = ?",
+    "UPDATE admin SET password_hash = ?, reset_token = NULL, reset_token_expiry = NULL WHERE email = ?",
     [hashedPassword, email] // Save new password and delete token + expiry time
   );
 };
